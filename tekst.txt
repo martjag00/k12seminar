@@ -1,12 +1,24 @@
-1.Liidest kasutame, sest klass saab muidu ainult ühte teist klassi kasutada. Seega on liidest hea kasutada, sest saab igal pool kasutada (implements). Töö kavandamise käigus kirjutatakse liidesesse kõik mis vaja on, vajadusel saab ka täiendada, aga kindlasti peab kasutama kõiki liideses deklareeritud fukntsioone kui rakendad teise klassi.
-2.Liidest on hea kasutada kui näiteks projekt on mahuline ning rühmaga teete selle kallal tööd, siis hoiate ühtset struktuuri.
-3.Üks interface saab samuti extendida teist interface’i.
-4.ühes klassis saab samuti kasutada rohkem kui üht interface’i.
+1.Liidest kasutame, sest klass saab muidu ainult Ã¼hte teist klassi kasutada. Seega on liidest hea kasutada, sest saab igal pool kasutada (implements). TÃ¶Ã¶ kavandamise kÃ¤igus kirjutatakse liidesesse kÃµik mis vaja on, vajadusel saab ka tÃ¤iendada, aga kindlasti peab kasutama kÃµiki liideses deklareeritud fukntsioone kui rakendad teise klassi.
+2.Liidest on hea kasutada kui nÃ¤iteks projekt on mahuline ning rÃ¼hmaga teete selle kallal tÃ¶Ã¶d, siis hoiate Ã¼htset struktuuri.
+3.Ãœks interface saab samuti extendida teist interfaceâ€™i.
+4.Ã¼hes klassis saab samuti kasutada rohkem kui Ã¼ht interfaceâ€™i.
 5. 
-  interface Tripsuliides {
-	void alusta(char symbol); 
-	char kelleKord();
-	void paiguta(char symbol, int rida, int veerg);
-	boolean paiguta(int rida, int veerg); // true if was able to place. false if selected position is already taken.
-	char kysi(int rida, int veerg);
+  interface InterFaceOne {
+	void function1();
+	char tere1();
+	}
+  interface InterFaceTwo{
+  	void function2();
+	char tere2();
 }
+ 
+public class Liides1 implements InterFaceOne{
+	void function1();
+	char tere1();
+}
+public class MultipleInterfaces implements InterFaceOne, InterFaceTwo{
+	void function2();
+	char tere2();
+	void function1();
+	char tere1();
+	}
