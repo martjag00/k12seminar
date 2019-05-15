@@ -1,0 +1,12 @@
+1.Liidest kasutame, sest klass saab muidu ainult ühte teist klassi kasutada. Seega on liidest hea kasutada, sest saab igal pool kasutada (implements). Töö kavandamise käigus kirjutatakse liidesesse kõik mis vaja on, vajadusel saab ka täiendada, aga kindlasti peab kasutama kõiki liideses deklareeritud fukntsioone kui rakendad teise klassi.
+2.Liidest on hea kasutada kui näiteks projekt on mahuline ning rühmaga teete selle kallal tööd, siis hoiate ühtset struktuuri.
+3.Üks interface saab samuti extendida teist interface’i.
+4.ühes klassis saab samuti kasutada rohkem kui üht interface’i.
+5. 
+  interface Tripsuliides {
+	void alusta(char symbol); 
+	char kelleKord();
+	void paiguta(char symbol, int rida, int veerg);
+	boolean paiguta(int rida, int veerg); // true if was able to place. false if selected position is already taken.
+	char kysi(int rida, int veerg);
+}
